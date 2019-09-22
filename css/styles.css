@@ -1,0 +1,462 @@
+/***************************************************************
+	EN COURS DE MODIF
+		** desoler pour le désordre **
+***************************************************************/
+
+
+
+
+/***************************************************************
+Homogénéité des "boîtes" HTML
+***************************************************************/
+
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+/***************************************************************
+Taille de police "responsive"
+***************************************************************/
+
+html {
+    font-size: 0.625em;
+    font-size: calc(1em * 0.625); /*pour résoudre des bugs IE*/
+
+}
+
+body {
+    font-size: 1.6em; /*équivalent à 16px selon le viewport*/
+   
+}
+
+/***************************************************************
+	mes classes css mutualisées
+***************************************************************/
+
+
+
+.bg-section{
+	background-color: #EEEEEE;
+}
+
+h1, h2, h3{
+	font-family: 'Nova Mono', monospace;
+}
+
+h2, h3{
+	font-size: 1.3em;
+}
+
+p{
+	font-family: 'Sriracha', cursive;
+	font-size: 1.1em;
+}
+
+
+ /**************************************************
+			LOADER
+ **************************************************/
+
+
+*:focus {
+  outline: none;
+}
+
+#blackPage {
+  font-family: 'Sirin Stencil', cursive;
+  background: #111111;
+  font-size: 80px;
+  width: 100vw;
+  height: 100vh;
+}
+#centreLeLoad{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+   width: 100vw;
+  height: 100vh;
+}
+.neon {
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 10px #87ceeb, 0 0 15px #87ceeb, 0 0 30px deepskyblue, 0 0 30px deepskyblue, 0 0 30px deepskyblue, 0 0 40px deepskyblue, 0 0 50px deepskyblue, 0 0 60px deepskyblue, 0 0 70px deepskyblue, 0 0 80px deepskyblue, 0 0 90px deepskyblue, 0 0 100px skyblue;
+}
+
+.info {
+  margin: 0 auto;
+  text-align: center;
+  color: #f2f2f2;
+  text-shadow: 0 0 10px #bc44e1, 0 0 15px #bc44e1, 0 0 10px #c758ea, 0 0 15px #c758ea, 0 0 10px #d263f4, 0 0 15px #d263f4;
+  font-size: 30px;
+}
+
+
+
+
+/***************************************************************
+	nav
+***************************************************************/
+
+
+/***************************************************************
+	slider
+***************************************************************/
+
+#slider{
+	height: 100vh;
+	background-image: url(../img/city.jpg);
+	background-position: bottom;
+	background-size: cover;
+	position: relative;
+}
+
+
+h1{
+	color: white;
+	text-transform: uppercase;
+	font-size: 3.6em;
+	padding-top: 205px;
+}
+
+h1 span{
+	
+	animation: animate 3s linear infinite;
+}
+
+h1 span:nth-child(1){
+	animation-delay: 0s;
+}
+h1 span:nth-child(2){
+	animation-delay: 0.25s;
+}
+h1 span:nth-child(3){
+	animation-delay: 0.5s;
+}
+h1 span:nth-child(4){
+	animation-delay: 0.75s;
+}
+h1 span:nth-child(5){
+	animation-delay: 1s;
+}
+h1 span:nth-child(6){
+	animation-delay: 1.25s;
+}
+h1 span:nth-child(7){
+	animation-delay: 1.5s;
+}
+h1 span:nth-child(8){
+	animation-delay: 1.75s;
+}
+h1 span:nth-child(9){
+	animation-delay: 2s;
+}
+h1 span:nth-child(10){
+	animation-delay: 2.25s;
+}
+h1 span:nth-child(11){
+	animation-delay: 2.5s;
+}
+
+
+@keyframes animate{
+	0%,100%
+	{
+		color: #bc44e1;	
+		filter: blur(0.2px);
+		text-shadow: 0 0 10px #00b3ff,
+					0 0 20px #00b3ff,
+					0 0 40px #00b3ff,
+					0 0 80px #00b3ff,
+					0 0 120px #00b3ff,
+					0 0 200px #00b3ff,
+					0 0 300px #00b3ff,
+					0 0 400px #00b3ff,
+
+	}
+	5%,95%
+	{
+		color: #fff;
+		filter: blur(1.7px);
+		text-shadow: none,
+	}
+}
+
+
+#h2main{
+	
+	font-family: 'Nova Mono', monospace;
+	color: #93f2f9;
+	font-size: 1.7em;
+	margin-top: 190px;
+	filter: blur(0.4px);
+	text-transform: uppercase;
+	text-shadow: 3px 3px 5px #bc44e1,
+}
+
+
+
+
+/***************************************************************
+	corp de page
+***************************************************************/
+
+.content{
+	width: 100%;
+	max-width: 1080px;
+	margin: auto; 
+	border: 3px solid #EEEEEE;
+	border-top: none;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.content h2{
+	/*margin-top: 60px;*/
+	margin-bottom: 30px;
+}
+
+/***************************************************************
+	COMPETENCE
+***************************************************************/
+
+.img-competence{
+	width: 50px;
+	margin: 10px auto;
+}
+
+.img-competence img{
+	max-width: 100%;
+} 
+
+#myface img{
+	width: 100px;
+	border:2px solid black;
+	border-radius: 50%;
+    transition: 8s;
+}
+
+#myface img:hover{
+	transform: rotateY(1080deg);
+} 
+
+/***************************************************************
+		PORTFOLIO
+***************************************************************/
+
+#portfolio .portfolio-item {
+	padding: 7%;
+  right: 0;
+  margin: auto;
+}
+
+#portfolio .portfolio-item .portfolio-link {
+  position: relative;
+  display: block;
+  max-width: 400px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  opacity: 0;
+  background: rgba(254, 209, 54, 0.9);
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
+  opacity: 1;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 20px;
+  margin-top: -12px;
+  text-align: center;
+  color: white;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
+  margin-top: -12px;
+}
+
+
+
+#portfolio .portfolio-item .portfolio-caption {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 25px;
+  text-align: center;
+  background-color:  rgba(0, 0, 0, 0.1);
+}
+
+#portfolio .portfolio-item .portfolio-caption h4 {
+  margin: 0;
+  text-transform: none;
+}
+
+#portfolio .portfolio-item .portfolio-caption p {
+  font-size: 15px;
+  margin: 0;
+}
+
+#portfolio * {
+  z-index: 2;
+}
+
+.color_modal{
+	background:   rgba(0, 0, 0, 0.1); 
+}
+
+/***************************************************************
+	CV et application
+***************************************************************/
+
+.cv{
+	font-family: 'Nova Mono', monospace;
+	color: #bc44e1;
+	margin-top: 60px;
+	filter: blur(0.4px);
+	text-transform: uppercase;
+	text-shadow: 3px 3px 5px #bc44e1,
+}
+
+.cv:hover{
+	text-decoration: none;
+	color: #93f2f9;
+
+}
+
+.upload{
+	height: 120px;
+	margin: 5% 5%;
+
+}
+
+/***************************************************************
+	Ma formation
+***************************************************************/
+.imgLink{
+	transform: rotate(-25deg);
+	width: 23%;
+	padding: 10px;
+}
+
+/***************************************************************
+	footer
+***************************************************************/
+
+footer{
+	background: #1b193e;
+	color: white;
+	margin-bottom: 0;
+}
+
+footer img{
+	width: 90px;
+	transition: 0.5s;
+}
+
+footer img:hover{
+	
+	transform: scale(1.5);
+	
+}
+
+footer ul li a{
+	color: white;	
+}
+footer ul li a:hover{
+	text-decoration: none;
+	color: #bc44e1;
+}
+
+
+
+/***************************************************************
+	
+***************************************************************/
+
+@media all and (max-width : 850px){
+	h1{
+		font-size: 3em;
+	}
+	#h2main{
+		font-size: 1.3em;
+		margin-top: 20%;
+	}
+
+}
+
+
+/***************************************************************
+	grand écran
+***************************************************************/
+@media all and (min-width: 650px){
+
+	p{
+		margin-left: 70px;
+		margin-right: 70px;
+	}
+
+	/* nav header */
+	#h2main{
+		filter: blur(0.7px);
+	}
+	h1{
+		font-size: 4.5em;
+	}
+
+
+	/* langages */
+
+	.img-competence{
+		width: 100px;
+		margin: 30px auto;
+	}
+
+	.img-competence img{
+		max-width: 100%;
+	} 
+
+	#myface img{
+		width: 300px;
+		border:2px solid black;
+		border-radius: 50%;
+	    transition: 8s;
+	}
+
+	#myface img:hover{
+		transform: rotateY(1080deg);
+	} 
+
+	/* portfolio */
+
+		#card img{
+		height: 400px;
+		
+		margin: auto;
+		}
+
+	/* footer */	
+		footer ul{
+			font-size: 1.2em;
+		}
+		footer img{
+		width: 120px;
+		}
+}
